@@ -1,0 +1,18 @@
+{% extends 'AppEntregaFinal/padre.html' %}
+
+{% block contenidoQueCambia %}
+
+
+<p>Estamos buscando la categoria: {{nombre}}</p>
+{% if categoria %}
+    <ul>
+        {% for cat in categoria %}
+            <li>{{cat.nombre}} - {{cat.descripcion}}</li>
+        {% endfor %}    
+    </ul>
+
+{%else%}
+    <p>No hay datos con esa descripcion</p>   
+{% endif %}
+
+{% endblock %}
